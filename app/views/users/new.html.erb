@@ -1,0 +1,41 @@
+<h1>Register now</h1>
+
+<%= form_with model: @user, local: true do |f| %>
+  <div>
+    <%= f.label :username do %>
+      Username <span class="required">*</span>
+    <% end %><br>
+    <%= f.text_field :username, required: true %><br>
+  </div>
+
+  <div>
+    <%= f.label :email do %>
+      Email <span class="required">*</span>
+    <% end %><br>
+    <%= f.email_field :email, required: true %><br>
+  </div>
+
+  <div>
+    <%= f.label :password do %>
+      Password <span class="required">*</span>
+    <% end %><br>
+    <%= f.password_field :password, required: true %><br>
+  </div>
+
+  <div>
+    <%= f.label :password_confirmation do %>
+      Confirm Password <span class="required">*</span>
+    <% end %><br>
+    <%= f.password_field :password_confirmation, required: true %><br>
+  </div>
+
+
+  <%= f.fields_for :profile do |p| %>
+    <%= render partial: 'profiles/form', locals: { f: p } %>
+  <% end %>
+
+  <div>
+    <%= f.submit "Create account" %>
+  </div>
+<% end %>
+

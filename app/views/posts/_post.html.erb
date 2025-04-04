@@ -1,0 +1,13 @@
+<div class="post-card">
+  <h2><%= link_to post.title, post_path(post) %></h2>
+
+  <p>
+  <% if local_assigns[:truncate] %>
+    <%= truncate(post.content, length: 100) %>
+  <% else %>
+    <%= post.content %>
+  <% end %>
+  </p>
+  
+  <h4>Posted by <%= post.user.username %></h4>
+</div>

@@ -1,0 +1,33 @@
+<h1>About Me</h1>
+
+<div class="profile-card">
+  <p><strong>Username:</strong> <%= @profile.user.username %></p>
+  <p><strong>Email:</strong> <%= @profile.user.email %></p>
+  <p><strong>Department:</strong> <%= @profile.department %></p>
+  <p><strong>Introduction:</strong> <%= @profile.intro %></p>
+
+  <% if current_user == @profile.user %>
+    <%= link_to "Edit Profile", edit_profile_path(@profile), class: "btn-edit" %>
+  <% end %>
+</div>
+
+<hr>
+
+<h2>My Posts History</h2>
+
+<% if @profile.user.posts.any? %>
+  <div class="post-list">
+    <% @profile.user.posts.each do |post| %>
+      <div class="post-card">
+        <h3><%= link_to post.title, post_path(post) %></h3>
+        <p><%= truncate(post.content, length: 150) %></p>
+        <p class="post-meta">🕒 <%= post.created_at.strftime("%b %d, %Y") %></p>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>You haven't posted anything yet.</p>
+<% end %>
+
+<%= link_to "Main Page", posts_path%>
+

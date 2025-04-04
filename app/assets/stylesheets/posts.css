@@ -1,0 +1,146 @@
+/*posts*/
+
+.post-card {
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  padding: 16px;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: blueviolet;
+}
+
+.post-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+}
+
+.post-card h4 {
+  font-weight: normal;
+  font-size: 14px;
+  color: slategrey;
+  margin-top: 12px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: darkblue;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.post-actions {
+  display: flex;
+  gap: 0;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.edit-link {
+  display: inline-block;
+  margin-right: 1px;
+  color: royalblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.edit-link:hover {
+  text-decoration: underline;
+}
+
+.delete-button {
+  background-color: orangered;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1px;
+}
+
+.delete-button:hover {
+  background-color: indianred;
+}
+
+
+form div {
+  margin-bottom: 16px;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto; 
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+form input[type="submit"] {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+form input[type="submit"]:hover {
+  background-color: skyblue;
+}
+
+.comment-section h2 {
+  margin-bottom: 16px;
+  text-align: center;
+  color: slateblue;
+}
+
+.comment-section form {
+  margin-top: 20px;
+}
+
+.comment-section p {
+  margin-bottom: 12px;
+}
+
+.like-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.like-section button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+}
+
+.like-button.unliked {
+  color: white;
+  background-color: slategrey;
+}
+
+.like-button.liked {
+  color: white;
+  background-color: palevioletred;
+}
+
