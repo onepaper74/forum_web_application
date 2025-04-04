@@ -13,9 +13,7 @@ default: &default
 development:
   <<: *default
   database: final_app_development
-  username: zzr
-  password:
-  host: localhost
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,9 +21,7 @@ development:
 test:
   <<: *default
   database: final_app_test
-  username: zzr
-  password:
-  host: localhost
+
 
 
 # Store production database in the storage/ directory, which by default
