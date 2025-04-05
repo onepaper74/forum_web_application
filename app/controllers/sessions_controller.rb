@@ -10,8 +10,13 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id       
         redirect_to root_path, notice: "Logged in successfully！Welcome #{user.username}"
       else
-        flash.now[:alert] = "Invalid email/password combination!"
-        render :new
+          if Rails.env.production?
+            flash[:alert] = "Invalid email/password combination!"
+            redirect_to login_path
+          else
+            flash.now[:alert] = "Invalid email/password combination!"
+            render :new, layout: "application"
+          end
       end
     end
 
