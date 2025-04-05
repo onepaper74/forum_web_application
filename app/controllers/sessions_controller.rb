@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
         redirect_to root_path, notice: "Logged in successfully！Welcome #{user.username}"
       else
         flash.now[:alert] = "Invalid email/password combination!"
-        render :new, layout: "application"
+        puts "FLASH ALERT: #{flash[:alert]}"
+        render :new
       end
     end
 
